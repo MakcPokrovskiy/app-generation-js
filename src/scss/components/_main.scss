@@ -1,0 +1,104 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(217, 19%, 24%);
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: hsl(217, 19%, 38%);
+  }
+
+  .advice {
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: hsl(150, 100%, 66%);
+  }
+
+  .descr {
+    max-width: 450px;
+    font-size: 28px;
+    text-align: center;
+    color: white;
+  }
+
+  .underline {
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .dot {
+    position: relative;
+    width: 5px;
+    height: 17px;
+    border-radius: 5px;
+    background-color: white;
+
+    &-one {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        display: block;
+        width: 150px;
+        height: 2px;
+        background-color: gray;
+        transform: translate(0, -50%);
+      }
+    }
+
+    &-two {
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        display: block;
+        width: 150px;
+        height: 2px;
+        background-color: gray;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+
+  .bones {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: hsl(150, 100%, 66%);
+    transform: translate(-50%, 50%);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 3px solid hsl(150, 100%, 88%);
+      outline-offset: 2px;
+      border-radius: 50%;
+    }
+
+    &-img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+}
